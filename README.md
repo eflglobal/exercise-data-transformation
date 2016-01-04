@@ -107,4 +107,4 @@ When it reaches the start of your process, the data has already been validated s
   - Variables with the same name have same type/purpose (i.e `clickCount` is always an integer
     representing the number of times the person clicked on something).
 
-Your task is to write a program to transform the incoming data from `payloads.js` to the table structure described by the `Assessmentresponse` model.
+Your task is to write a program to transform the incoming data from `payload.js` to the table structure described by the `Assessmentresponse` model.
