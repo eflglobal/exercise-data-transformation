@@ -55,21 +55,21 @@ Also, you've already manually transformed one of the questions/steps to give you
   "sequence": 1,
 
   "observations": {
-    "meta_1":       {
+    "cheat_customer": {
       "responseValue":    "5",
       "responseSequence": ["5"],
       "timeElapsed":      8,
       "viewCount":        1,
     },
 
-    "meta_2":       {
+    "work_integrity": {
       "responseValue":    "3",
       "responseSequence": ["2", "3", "4", "3"],
       "timeElapsed":      48,
       "viewCount":        5,
     },
 
-    "meta_3":       {
+    "personal_honesty": {
       "responseValue":    "1",
       "responseSequence": ["5", "1"],
       "timeElapsed":      17,
@@ -90,9 +90,9 @@ Also, you've already manually transformed one of the questions/steps to give you
 +-----------------------+------------------+-------------+-------------+------------+----------------------+
 | questionCode          | questionResponse | section     | timeElapsed | viewsCount | responseSequence     |
 +-----------------------+------------------+-------------+-------------+------------+----------------------+
-| meta_1                | 5                | likert      |           8 |          1 | ["5"]                |
-| meta_2                | 3                | likert      |          48 |          5 | ["2", "3", "4", "3"] |
-| meta_3                | 1                | likert      |          17 |          2 | ["5", "1"]           |
+| cheat_customer        | 5                | likert      |           8 |          1 | ["5"]                |
+| work_integrity        | 3                | likert      |          48 |          5 | ["2", "3", "4", "3"] |
+| personal_honesty      | 1                | likert      |          17 |          2 | ["5", "1"]           |
 | _likert               | NULL             | likert      |         486 |          1 | NULL                 |
 | _likert_helpBarClicks | 3                | likert      |        NULL |       NULL | NULL                 |
 +-----------------------+------------------+-------------+-------------+------------+----------------------+
@@ -107,4 +107,4 @@ When it reaches the start of your process, the data has already been validated s
   - Variables with the same name have same type/purpose (i.e `clickCount` is always an integer
     representing the number of times the person clicked on something).
 
-Your task is to write a program to transform the incoming data from `payload.js` to the table structure described by the `Assessmentresponse` model.
+Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `Assessmentresponse` model.
