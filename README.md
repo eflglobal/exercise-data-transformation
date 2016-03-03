@@ -59,21 +59,21 @@ Also, you've already manually transformed one of the questions/steps to give you
       "responseValue":    "5",
       "responseSequence": ["5"],
       "timeElapsed":      8,
-      "viewCount":        1,
+      "viewCount":        1
     },
 
     "work_integrity": {
       "responseValue":    "3",
       "responseSequence": ["2", "3", "4", "3"],
       "timeElapsed":      48,
-      "viewCount":        5,
+      "viewCount":        5
     },
 
     "personal_honesty": {
       "responseValue":    "1",
       "responseSequence": ["5", "1"],
       "timeElapsed":      17,
-      "viewCount":        2,
+      "viewCount":        2
     }
   },
 
