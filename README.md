@@ -1,4 +1,4 @@
-# exercise-data-transformation
+# Data Transformation Exercise
 
 The company where you work has created an online survey. Whenever someone takes this survey, the responses and some meta-data about it are collected and sent to the backend as a list of JSON objects.
 
@@ -78,9 +78,7 @@ Also, you've already manually transformed one of the questions/steps to give you
   },
 
   "metas": {
-    "timeElapsed":    486,
     "helpBarClicks":  3,
-    "viewCount":      1
   }
 }
 ```
@@ -108,3 +106,10 @@ When it reaches the start of your process, the data has already been validated s
     representing the number of times the person clicked on something).
 
 Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `Assessmentresponse` model.
+
+**You do not have to submit a Python/Django solution; feel free to use whatever language/framework that you feel most comfortable with.**
+
+# Hints
+
+- The observation attributes in `payload.js` vary depending on the step/observation name.  We did that on purpose.
+- You may need to make assumptions about the meaning/purpose of some of the data.  If you can justify it, we'll go with it.
