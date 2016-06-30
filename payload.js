@@ -9,8 +9,7 @@
 
     "metas": {
       "timeElapsed":    38,
-      "helpBarClicks":  0,
-      "viewCount":      1
+      "deviceRotation": ["p", "l", "p"]
     }
   },
 
@@ -63,9 +62,10 @@
     },
 
     "metas": {
-      "timeElapsed":    108,
-      "helpBarClicks":  0,
-      "viewCount":      1
+      "timeElapsed":         108,
+      "helpBarClicks":       0,
+      "viewCount":           1,
+      "facilitatorAssisted": true
     }
   },
 
@@ -110,9 +110,8 @@
     },
 
     "metas": {
-      "timeElapsed":    89,
-      "helpBarClicks":  1,
-      "viewCount":      1
+      "timeElapsed":         89,
+      "facilitatorAssisted": false
     }
   },
 
@@ -126,8 +125,7 @@
 
     "metas": {
       "timeElapsed":    17,
-      "helpBarClicks":  0,
-      "viewCount":      1
+      "deviceRotation": ["p"]
     }
   }
 ]
