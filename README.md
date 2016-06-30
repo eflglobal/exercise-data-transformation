@@ -6,7 +6,9 @@ After validation, this data must be transformed so it can be correctly stored in
 
 ## About the data
 
-For storing the data in the `assessmentResponse` table, you have built the following Django model:
+The application you are working on already has an existing model to store response data in a relational database.  Unfortunately, it's part of the legacy application and doesn't quite match the structure of the data from the new survey application.  Lots of existing systems rely on it, however, so you'll just have to find a way to make the data fit.
+
+Here's the model that you have to work with:
 
 ```
 class Assessmentresponse(models.Model):
@@ -22,8 +24,7 @@ class Assessmentresponse(models.Model):
     questionresponse = models.TextField(null=True, blank=True,
                                         db_column='questionResponse')
 
-    # The name of the section in which the question appeared (e.g., in Dooblo
-    # these are called Chapters).
+    # The name of the section in which the question appeared.
     section = models.TextField(null=True, blank=True, db_column='section')
 
     # The amount of time (cumulative) that the applicant spent on this
@@ -104,7 +105,7 @@ When it reaches the start of your process, the data has already been validated s
 
   - The JSON structure is valid.
   - The values and fields are valid, and the former are consistent between steps/questions.
-  - Variables with the same name have same type/purpose (i.e `clickCount` is always an integer
+  - Attributes with the same name always have the same type/purpose (e.g., `clickCount` is always an integer
     representing the number of times the person clicked on something).
 
 Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `Assessmentresponse` model.
@@ -114,4 +115,4 @@ Your task is to write a program to transform the incoming data from [`payload.js
 # Hints
 
 - The observation attributes in `payload.js` vary depending on the step/observation name.  We did that on purpose.
-- You may need to make assumptions about the meaning/purpose of some of the data.  If you can justify it, we'll go with it.
+- You may need to make assumptions about the meaning/purpose of some of the data.  If you can justify it, we'll play along.
