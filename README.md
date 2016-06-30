@@ -85,7 +85,7 @@ When it reaches the start of your process, the data has already been validated s
   - Attributes with the same name always have the same type/purpose (e.g., `clickCount` is always an integer
     representing the number of times the person clicked on something).
 
-Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `Assessmentresponse` model.
+Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `assessmentResponse` model.
 
 **Feel free to use any language/framework that will allow you to maximize the time spent solving the problem.**
 
