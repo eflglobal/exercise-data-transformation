@@ -78,7 +78,9 @@ Also, you've already manually transformed one of the questions/steps to give you
   },
 
   "metas": {
+    "timeElapsed":    486,
     "helpBarClicks":  3,
+    "viewCount":      1
   }
 }
 ```
