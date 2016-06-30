@@ -11,42 +11,20 @@ The application you are working on already has an existing model to store respon
 Here's the model that you have to work with:
 
 ```
-class Assessmentresponse(models.Model):
+CREATE TABLE `assessmentResponse` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `questionCode` varchar(104) NOT NULL,
+  `questionResponse` varchar(104) DEFAULT NULL,
+  `section` varchar(104) DEFAULT NULL,
+  `timeElapsed` int(4) DEFAULT NULL,
+  `viewsCount` tinyint(4) DEFAULT NULL,
+  `responseSequence` varchar(104) DEFAULT NULL,
 
-    # The name of the variable.
-    questioncode = models.TextField(null=False, blank=False,
-                                    db_column='questionCode')
-
-    # The value that the applicant entered/selected; often a label or other
-    # "human-readable" value.
-    #
-    # Note that this value should only be None if the question was skipped.
-    questionresponse = models.TextField(null=True, blank=True,
-                                        db_column='questionResponse')
-
-    # The name of the section in which the question appeared.
-    section = models.TextField(null=True, blank=True, db_column='section')
-
-    # The amount of time (cumulative) that the applicant spent on this
-    # question.
-    timeelapsed = models.IntegerField(max_length=4, null=True,
-                                    blank=True, db_column='timeElapsed')
-
-    # The number of times the applicant saw this question (can be > 1 if the
-    # applicant backtracks in the test).
-    viewscount = models.SmallIntegerField(max_length=4, null=True,
-                                        blank=True, db_column='viewsCount')
-
-    # Captures the unique response values that the applicant entered for the
-    # question (in case he changed his response).
-    responsesequence = models.TextField(null=True, blank=True,
-                                        db_column='responseSequence')
-
-    class Meta(object):
-        db_table = 'assessmentResponse'
+  PRIMARY KEY (`id`)
+);
 ```
 
-Also, you've already manually transformed one of the questions/steps to give yourself an idea of how you want it to look once saved on the database.
+To give yourself an idea of how you want it to look once saved in the database, you manually transformed one of the questions/steps:
 
 ### Input Data:
 ```
@@ -104,15 +82,14 @@ Also, you've already manually transformed one of the questions/steps to give you
 When it reaches the start of your process, the data has already been validated so you can assume:
 
   - The JSON structure is valid.
-  - The values and fields are valid, and the former are consistent between steps/questions.
   - Attributes with the same name always have the same type/purpose (e.g., `clickCount` is always an integer
     representing the number of times the person clicked on something).
 
 Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `Assessmentresponse` model.
 
-**You do not have to submit a Python/Django solution; feel free to use whatever language/framework that you feel most comfortable with.**
+**Feel free to use any language/framework that will allow you to maximize the time spent solving the problem.**
 
 # Hints
 
 - The observation attributes in `payload.js` vary depending on the step/observation name.  We did that on purpose.
-- You may need to make assumptions about the meaning/purpose of some of the data.  If you can justify it, we'll play along.
+- You may need to make assumptions about the meaning/purpose of some of the data.  As long as you can justify it, we'll play along.
