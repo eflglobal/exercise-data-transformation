@@ -93,3 +93,5 @@ Your task is to write a program to transform the incoming data from [`payload.js
 
 - The observation attributes in `payload.js` vary depending on the step/observation name.  We did that on purpose.
 - You may need to make assumptions about the meaning/purpose of some of the data.  As long as you can justify it, we'll play along.
+- Since this is a programming exercise with a time limit, keep in mind that a great solution that's 80% complete is better than a mediocre solution that's 100% complete.
+
