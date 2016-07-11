@@ -82,16 +82,15 @@ To give yourself an idea of how you want it to look once saved in the database, 
 When it reaches the start of your process, the data has already been validated so you can assume:
 
   - The JSON structure is valid.
-  - Attributes with the same name always have the same type/purpose (e.g., `clickCount` is always an integer
-    representing the number of times the person clicked on something).
+  - Attributes with the same name always have the same type/purpose (e.g., `clickCount` is always an integer representing the number of times the person clicked on something).
 
 Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `assessmentResponse` model.
 
-**Feel free to use any language/framework that will allow you to maximize the time spent solving the problem.**
+**You may use any language/framework to solve this exercise.**
 
 # Hints
 
-- The observation attributes in `payload.js` vary depending on the step/observation name.  We did that on purpose.
+- Some of the observations in `payload.js` have attributes that don't map nicely to `assessmentResponse`.  Your code should still try to import these values... somehow.
 - You may need to make assumptions about the meaning/purpose of some of the data.  As long as you can justify it, we'll play along.
 - Since this is a programming exercise with a time limit, keep in mind that a great solution that's 80% complete is better than a mediocre solution that's 100% complete.
 
