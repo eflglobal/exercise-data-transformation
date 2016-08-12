@@ -4,29 +4,29 @@ The company where you work has created an online survey. Whenever someone takes 
 
 After validation, this data must be transformed so it can be correctly stored in the database. You've been tasked with writing the transformation process to make this incoming data be ready for storing in your database.
 
-## About the data
-
+## Model
 The application you are working on already has an existing model to store response data in a relational database.  Unfortunately, it's part of the legacy application and doesn't quite match the structure of the data from the new survey application.  Lots of existing systems rely on it, however, so you'll just have to find a way to make the data fit.
 
 Here's the model that you have to work with:
 
 ```
-CREATE TABLE `assessmentResponse` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `questionCode` varchar(104) NOT NULL,
-  `questionResponse` varchar(104) DEFAULT NULL,
-  `section` varchar(104) DEFAULT NULL,
-  `timeElapsed` int(4) DEFAULT NULL,
-  `viewsCount` tinyint(4) DEFAULT NULL,
-  `responseSequence` varchar(104) DEFAULT NULL,
-
-  PRIMARY KEY (`id`)
+CREATE TABLE assessmentResponse (
+  id integer PRIMARY KEY,
+  questionCode varchar(104),
+  questionResponse varchar(104),
+  section varchar(104),
+  timeElapsed smallint,
+  viewsCount smallint,
+  responseSequence varchar(104)
 );
 ```
 
-To give yourself an idea of how you want it to look once saved in the database, you manually transformed one of the questions/steps:
+Note:  `assessmentResponse.id` should auto-increment (exact implementation depends on which SQL/ORM backend you are using).
 
-### Input Data:
+## Example Data
+To give yourself an idea of how you want it to look once saved in the database, you manually transformed one of the questions/steps.
+
+### Input JSON
 ```
 {
   "uid":      "b1435d5771c14c2498642f07ce04b087",
@@ -64,7 +64,7 @@ To give yourself an idea of how you want it to look once saved in the database, 
 }
 ```
 
-### Output Data:
+### Database Records Created
 ```
 +-----------------------+------------------+-------------+-------------+------------+----------------------+
 | questionCode          | questionResponse | section     | timeElapsed | viewsCount | responseSequence     |
@@ -86,7 +86,7 @@ When it reaches the start of your process, the data has already been validated s
 
 Your task is to write a program to transform the incoming data from [`payload.js` (included in this GitHub repo)](payload.js) to the table structure described by the `assessmentResponse` model.
 
-**You may use any language/framework to solve this exercise.**
+**You may use any language/framework to solve this exercise.  Use whatever database/ORM that you are most comfortable with.**
 
 # Hints
 
