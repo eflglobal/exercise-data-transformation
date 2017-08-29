@@ -86,5 +86,6 @@ To give yourself an idea of how you want it to look once saved in the database, 
 - Some of the observations in `payload.json` have attributes that don't map nicely to `assessmentResponse`.
   Your code should still try to import these values... somehow.
 - You may need to make assumptions about the meaning/purpose of some of the data.
-  As long as you document it somewhere, we'll play along.
-- Since this is a programming exercise with a time limit, keep in mind that a great solution that's 75% complete is better than an okay solution that's 100% complete.
+  As long as you document it somewhere (and it's... you know, _plausible_ :slightly_smiling_face:), we'll play along.
+- This is a programming exercise with a time limit, so focus your attention on the areas that will best showcase your skills and talents, while still completing as many of the requirements as possible.
+  An amazing solution that's 75% complete is better than an okay solution that's 100% complete.
