@@ -1,10 +1,19 @@
+_This exercise is based on a real problem that we had to solve at EFL.  It is
+designed to show you an example of the kinds of challenges you would be working
+on at EFL, as well as to help us understand how you approach these kinds of
+challenges!  Good luck, and above all, have fun!_
+
 # Data Transformation Exercise
-The company where you work has created an online survey.
-Whenever someone completes this survey, their responses and some metadata are collected and sent to the backend as a list of JSON objects.
+The company where you work has created an online survey.  Whenever someone
+completes this survey, their responses and some metadata are collected and sent
+to the backend as a list of JSON objects.
 
-After validation, this data must be transformed so it can be correctly stored in the database.
+After validation, this data must be transformed so it can be correctly stored in
+the database.
 
-**Your task is to design and build a process to transform the incoming data from [`payload.json` (included in this GitHub repo)](payload.json) so that it can be imported into the `assessmentResponse` table described below.**
+**Your task is to design and build a process to transform the incoming data from
+[`payload.json` (included in this GitHub repo)](payload.json) so that it can be
+imported into the `assessmentResponse` table described below.**
 
 - You must use Python (any version) to complete this exercise.
 - You may use any frameworks/ORMs/libraries/etc. that you are comfortable with.
@@ -12,9 +21,10 @@ After validation, this data must be transformed so it can be correctly stored in
   but it must produce something that would be trivially easy to import.
 
 ## Model
-Here's the model that you have to work with.
-Unfortunately, it's part of the legacy application and doesn't quite match the structure of the data from the new survey application.
-But, lots of existing systems rely on it, so you'll just have to find a way to make the data fit.
+Here's the model that you have to work with.  Unfortunately, it's part of the
+legacy application and doesn't quite match the structure of the data from the
+new survey application.  But, lots of existing systems rely on it, so you'll
+just have to find a way to make the data fit.
 
 ```sql
 CREATE TABLE assessmentResponse (
@@ -29,7 +39,8 @@ CREATE TABLE assessmentResponse (
 ```
 
 ## Example Data
-To give yourself an idea of how you want it to look once saved in the database, you manually transformed one of the questions/steps.
+To give yourself an idea of how you want it to look once saved in the database,
+you manually transformed one of the questions/steps.
 
 ### Input JSON
 ```json
@@ -83,9 +94,13 @@ To give yourself an idea of how you want it to look once saved in the database, 
 ```
 
 # Hints
-- Some of the observations in `payload.json` have attributes that don't map nicely to `assessmentResponse`.
-  Your code should still try to import these values... somehow.
-- You may need to make assumptions about the meaning/purpose of some of the data.
-  As long as you document it somewhere (and it's... you know, _plausible_ :slightly_smiling_face:), we'll play along.
-- This is a programming exercise with a time limit, so focus your attention on the areas that will best showcase your skills and talents, while still completing as many of the requirements as possible.
-  An amazing solution that's 75% complete is better than an okay solution that's 100% complete.
+- Some of the observations in `payload.json` have attributes that don't map
+  nicely to `assessmentResponse`.  Your code should still try to import these
+  values... somehow.
+- You may need to make assumptions about the meaning/purpose of some of the
+  data.  As long as you document it somewhere (and it's... you know, _plausible_
+  :slightly_smiling_face:), we'll play along.
+- This is a timed exercise, so focus your attention on the areas that will best
+  showcase your skills and talents, while still completing as many of the
+  requirements as possible.  An amazing solution that's 75% complete will be way
+  better received than an okay solution that's 100% complete.
